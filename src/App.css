@@ -1,46 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-shadow: 1px 1px 5px #ddd;
+  --main-border-radius: 7px;
+}
+
 .App {
-  min-height: 100vh;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
+	min-height: 100vh;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+	height: 40vmin;
+	pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
 
 .App-header {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-color: #282c34;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
 }
 
 .App-section {
-  flex: 1 1 0;
-  background-color: hsl(220deg 13% 13%);
-  color: white;
+	flex: 1 1 0;
+	background-color: hsl(220deg 13% 13%);
+	color: white;
 }
 
 .App-link {
-  color: #61dafb;
+	color: #61dafb;
+}
+
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.top-buttons {
+	margin: 20px auto;
+}
+
+.top-buttons button {
+	padding: 10px 20px;
+	min-width: 150px;
+	background: white;
+	color: black;
+	border-radius: var(--main-border-radius);
+	cursor: pointer;
+}
+
+.skill-check-title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.character-main {
+  position: relative;
+  width: 85%;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: var(--main-shadow);
+}
+.skill-check-div {
+  width: 100%;
+  box-shadow: var(--main-shadow);
+  border-radius: var(--main-border-radius);
+  padding: 20px;
+  margin-top: 20px;
+}
+.skill-check-div p {
+  margin-bottom: 10px;
+}
+
+.skill-check-div .roll{
+	padding: 0px 10px;
+}
+
+.skill-options {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.skill-options-div {
+  flex: 1;
+  padding: 20px 5px;
+  border-radius: var(--main-border-radius);
+  box-shadow: var(--main-shadow);
+}
+.skill-options-div .title {
+	font-size: 24px;
+	margin-bottom:  15px;
+}
+.skill-options-div .close {
+	cursor: pointer;
+	padding: 3px 15px;
+	margin-top: 10px;
+	border-radius: 15px;
+}
+.small{
+	max-width: 200px;
+}
+.large {
+	min-width: 400px;
+}
+.number-change {
+	min-width: 20px;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
